@@ -13,6 +13,7 @@
         <xsd:attribute name="msgfunction" type="msgfunction_Type" use="optional" default="OR"/>
         <xsd:attribute name="version" type="version_Type" use="optional" default="2013-1"/>
         <xsd:attribute name="useProfile" type="useProfile_Type" use="optional"/>
+        <xsd:attribute name="hjid" type="hjid_Type" use="optional"/>
     </xsd:complexType>
 
     <!-- Element (Instance ID: 283) -->
@@ -62,6 +63,12 @@
 <!-- Enumerazione: NT100-->            <xsd:enumeration value="2013-1"/>
         </xsd:restriction>
     </xsd:simpleType>
+    
+  <xsd:simpleType name="hjid_Type">
+    <xsd:restriction base="xsd:long">
+        <xsd:minInclusive value="0" />
+    </xsd:restriction>
+  </xsd:simpleType>
 
     <!-- Attribute (Instance ID: 939) -->
     <xsd:simpleType name="useProfile_Type">
