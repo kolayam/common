@@ -52,7 +52,7 @@ public abstract class Concept implements IConcept {
 	@Indexed(name=DESCRIPTION_FIELD,copyTo= {LANGUAGE_TXT_FIELD, TEXT_FIELD})
 	@Dynamic
 	protected Map<String, String> description;
-	@Indexed(name=COMMENT_FIELD,copyTo= {LANGUAGE_TXT_FIELD, TEXT_FIELD})
+	@Indexed(name=COMMENT_FIELD,copyTo= {LANGUAGE_TXT_FIELD, TEXT_FIELD,"allComments","*_comments"})
 	@Dynamic
 	protected Map<String, String> comment;
 	@Indexed(name=BASE_PLATFORM_FIELD)

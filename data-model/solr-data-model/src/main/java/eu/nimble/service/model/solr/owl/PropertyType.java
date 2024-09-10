@@ -31,7 +31,7 @@ public class PropertyType extends Concept implements IPropertyType {
 	@Indexed(required=false, type="string", name=VALUE_QUALIFIER_FIELD)
 	private ValueQualifier valueQualifier;
 	
-	@Indexed(required=false, name=USED_WITH_FIELD)
+	@Indexed(required=false, name=USED_WITH_FIELD, type="strings")
 	private Collection<String> product;
 	
 	@Indexed(required=false, name=USED_BY_FIELD)
