@@ -129,6 +129,7 @@ public abstract class Concept implements IConcept {
 			this.label = null;
 			this.lowercaseLabel = null;
 		}
+		System.out.println("set labels:"+labelMap);
 	}
 	/**
 	 * Helper method for adding a multilingual label to the concept. Only one label per language is stored.
@@ -148,6 +149,7 @@ public abstract class Concept implements IConcept {
 			String labelWithoutAccents = StringUtils.stripAccents(label);
 			this.lowercaseLabel.put(language, labelWithoutAccents.toLowerCase());
 		}
+		System.out.println(String.join("---","language",language,"label",label));
 		addLanguage(language);
 	}
 	/**
@@ -217,6 +219,8 @@ public abstract class Concept implements IConcept {
 			this.comment = new HashMap<>();
 		}
 		this.comment.put(language, comment);
+		System.out.println(String.join("---","language",language,"comment",comment));
+
 		// be sure to have all stored languages in the language list
 		addLanguage(language);
 	}
@@ -233,6 +237,7 @@ public abstract class Concept implements IConcept {
 		else {
 			this.comment = null;
 		}
+		System.out.println("set labels:"+commentMap);
 	}
 	/**
 	 * Method adding a multilingual description. Only one description per langauge is stored

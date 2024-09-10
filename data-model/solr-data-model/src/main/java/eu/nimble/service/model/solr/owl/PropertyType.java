@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
@@ -31,7 +32,7 @@ public class PropertyType extends Concept implements IPropertyType {
 	@Indexed(required=false, type="string", name=VALUE_QUALIFIER_FIELD)
 	private ValueQualifier valueQualifier;
 	
-	@Indexed(required=false, name=USED_WITH_FIELD, type="strings")
+	@Indexed(required=false, name=USED_WITH_FIELD)
 	private Collection<String> product;
 	
 	@Indexed(required=false, name=USED_BY_FIELD)
